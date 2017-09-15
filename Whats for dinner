@@ -1,0 +1,18 @@
+background(186, 145, 20); // wooden table
+// plate
+ellipse(200, 200, 350, 350);
+fill(135, 116, 56);
+ellipse(200, 200, 300, 300);
+
+//pizza
+fill(255, 247, 0);
+ellipse(200, 200, 275, 275);
+
+//pepperoni
+fill(255, 0, 0);
+ellipse(131, 256, 25, 25);
+ellipse(290, 228, 25, 25);
+ellipse(220, 185, 25, 25);
+ellipse(130, 148, 25, 25);
+ellipse(212, 291, 25, 25);
+ellipse(251, 116, 25, 25);
