@@ -1,0 +1,22 @@
+//star variables
+var xPos = 10;
+var yPos = 10;
+var starsize = 10; 
+var xPos2 = 400;
+var yPos2 = 10;
+var starsize2 = 10;
+
+//draws and animates the stars
+draw = function() {
+    background(29, 40, 115);
+    fill(255, 242, 0);
+    ellipse(xPos, yPos, starsize, starsize);
+    ellipse(xPos2, yPos2, starsize2, starsize2);
+    
+    xPos+=1;
+    yPos+=1;
+    starsize+=0.5;
+    xPos2-=1;
+    yPos2+=1;
+    starsize2+=0.5;
+};
