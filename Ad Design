@@ -1,0 +1,21 @@
+background(3, 11, 250);
+
+//text
+fill(245, 237, 239);
+textSize(30);
+text("FOOTBALL IS BACK!!", 50, 100);
+textSize(15);
+text("WATCH IT NOW!", 150, 300);
+
+//football
+fill(87, 77, 23);
+ellipse(200, 200, 150, 70);
+fill(247, 244, 244);
+rect(150, 195, 100, 5);
+rect(150, 188, 5, 20);
+rect(170, 188, 5, 20);
+rect(190, 188, 5, 20);
+rect(210, 188, 5, 20);
+rect(230, 188, 5, 20);
+rect(250, 188, 5, 20);
+
