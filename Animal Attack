@@ -1,0 +1,49 @@
+//variables
+var bodyX = 200;
+var bodyY = 220;
+var bodyW = 118;
+var headsize1 = 60;
+var headsize2 = 50;
+var earHeight = 60;
+var earWidth = 20;
+var eyesize = 5;
+var mouthSize1 = 20;
+var mouthSize2 = 10;
+
+draw = function() {
+    background(207, 254, 255);
+    fill(158, 151, 118);
+    ellipse(bodyX, bodyY, bodyW, 106); // body
+    ellipse(bodyX, bodyY-70, headsize1, headsize2); // face
+    ellipse(bodyX-50, bodyY-40, 30, 20);//arm
+    ellipse(bodyX+50, bodyY-40, 30, 20);//arm
+    ellipse(bodyX-60, bodyY+45, 50, 30);//foot
+    ellipse(bodyX+60, bodyY+45, 50, 30);//foot
+    ellipse(bodyX-20, bodyY-110, earWidth, earHeight);//ear
+    ellipse(bodyX+20, bodyY-110, earWidth, earHeight);//ear
+    fill(247, 247, 247);
+    ellipse(bodyX-20, bodyY-110, earWidth/1.5, earHeight/1.5);//ear
+    ellipse(bodyX+20, bodyY-110, earWidth/1.5, earHeight/1.5);//ear
+    
+    //eyes
+    fill(255, 0, 0);
+    ellipse(bodyX+12, bodyY-75, eyesize, eyesize);
+    ellipse(bodyX-12, bodyY-75, eyesize, eyesize);
+    
+    //mouth
+    fill(3, 0, 0);
+    ellipse(bodyX, bodyY-60, mouthSize1, mouthSize2);
+   
+   
+    //makes everything bigger
+     headsize1++; 
+     headsize2++;  
+     earHeight++;  
+     earWidth++;  
+     eyesize++;  
+     mouthSize1++;  
+     mouthSize2++;  
+    
+    
+    
+};
