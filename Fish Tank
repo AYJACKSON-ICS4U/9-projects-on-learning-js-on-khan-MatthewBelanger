@@ -1,0 +1,33 @@
+background(89, 216, 255);
+
+var centerX;
+var centerY;
+var bodyLength;
+var bodyHeight;
+var x;
+var y;
+var z;
+
+//fish function
+var drawfish = function(centerX, centerY, bodyLength, bodyHeight, x, y, z)
+{
+noStroke();
+fill(x, y, z);
+// body
+ellipse(centerX, centerY, bodyLength, bodyHeight);
+// tail
+var tailWidth = bodyLength/3;
+var tailHeight = bodyHeight/2.5;
+triangle(centerX-bodyLength/2, centerY,
+         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+// eye
+fill(33, 33, 33);
+ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+};
+
+//draws fish
+    drawfish(300, 200, 100, 100, 20, 45, 125);
+    drawfish(100, 200, 100, 50, 100, 245, 89);
+    drawfish(250, 300, 100, 50, 69, 0, 79);
+   
