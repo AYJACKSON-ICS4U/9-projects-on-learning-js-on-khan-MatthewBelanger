@@ -1,0 +1,46 @@
+fill(0, 0, 0);
+ellipse(200, 200, 375, 375);
+
+//if the mouse is clicked an answer is randomly chosen 
+mouseClicked = function()
+{
+var answer = floor(random(1, 6));
+
+if (answer===1) {
+    fill(17, 255, 0);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(255, 255, 255);
+    textSize(20);
+    text("YES", 185, 220);
+}
+else if (answer===2) {
+    fill(255, 0, 38);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(255, 255, 255);
+    textSize(20);
+    text("No", 190, 220);
+}
+else if (answer===3) {
+    fill(255, 238, 0);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(0, 0, 0);
+    textSize(20);
+    text("Maybe", 170, 220);
+}
+else if (answer===4) {
+    fill(26, 0, 255);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(255, 255, 255);
+    textSize(20);
+    text("Most", 180, 210);
+    text("Likely", 175, 240);
+}
+else if (answer===5) {
+    fill(201, 98, 14);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(255, 255, 255);
+    textSize(20);
+    text("Probably", 165, 220);
+    text("Not", 185, 240);
+}
+};
