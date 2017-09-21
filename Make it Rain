@@ -1,0 +1,38 @@
+var xPositions = [100, 200, 300, 250];
+var yPositions = [0, 0, 20, 50];
+
+var colors = [
+  color(255, 0, 0),
+  color(255, 128, 0),
+  color(255, 255, 0),
+  color(0, 255, 0),
+  color(0, 0, 255),
+  color(128, 0, 255)
+];
+// initialize the first raindrop to a random color
+var dropColors = [colors[Math.floor(Math.random() * colors.length)]];
+
+background(204, 247, 255);
+
+draw = function() {
+  background(204, 247, 255);
+
+  for (var i = 0; i < xPositions.length; i++) {
+    if (yPositions[i] < 400) { // if the raindrop hasnt hit the bottom
+      noStroke();
+      // set the fill color for this drop
+      fill(dropColors[i]);
+      ellipse(xPositions[i], yPositions[i], 10, 10);
+      yPositions[i] += 5;
+    } else { // when it hits the bottom, set the yPositions variable to 0
+      yPositions[i] = 5;
+    }
+  }
+};
+
+var mouseClicked = function() {
+  xPositions.push(mouseX);
+  yPositions.push(mouseY);
+  dropColors.push(colors[Math.floor(Math.random() * colors.length)]);
+  draw();
+};
