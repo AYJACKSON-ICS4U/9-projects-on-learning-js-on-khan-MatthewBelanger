@@ -1,0 +1,35 @@
+//array of books
+var books = [
+    {
+    title: "Harry Potter",
+    author: "J.K Rowling",
+    stars: 3
+    },
+    {
+    title: "I.T.",
+    author: "Stephen King",
+    stars: 4    
+    },
+    {
+        title: "To Kill a Mokckingbird",
+    author: "Harper Lee",
+    stars: 1
+    }
+];
+
+//draws bookshelf
+fill(173, 117, 33);
+rect(0, 200, width, 10);
+
+//loop to draw books
+for(var n=0; n<books.length; n++)
+{
+fill(214, 255, 219);
+rect(10+n*100, 100, 90, 100);
+fill(0, 0, 0);
+text(books[n].title, 15+n*100, 110, 70, 100);
+text(books[n].author, 15+n*100, 160, 70, 100);
+for (var i = 0; i < books[n].stars; i++) {
+    image(getImage("cute/Star"), 13 + i * 20+n*100, 175, 20, 30);
+}
+}
